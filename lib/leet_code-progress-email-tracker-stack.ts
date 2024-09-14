@@ -15,7 +15,7 @@ export class LeetCodeProgressEmailTrackerStack extends cdk.Stack {
     });
 
     new s3.Bucket(this, 'MyBucket2', {
-      bucketName: 'test-github-action000',
+      bucketName: 'test-github-action-1sdadsad4a54das000',
       versioned: true,
       removalPolicy: cdk.RemovalPolicy.DESTROY, // Automatically delete the bucket when the stack is deleted
       autoDeleteObjects: true, // Automatically delete all objects in the bucket when the stack is deleted
