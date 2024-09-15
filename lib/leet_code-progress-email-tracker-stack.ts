@@ -67,10 +67,9 @@ export class LeetCodeProgressEmailTrackerStack extends cdk.Stack {
       description: 'A layer to include requests library',
     });
     
-    
     // Create Lambda function
     const lambdaFunction = new Function(this, 'LambdaFunction', {
-      runtime: Runtime.PYTHON_3_9,
+      runtime: Runtime.PYTHON_3_12,
       description: 'lambda function',
       handler: 'index.handler',
       code: Code.fromInline(
@@ -110,7 +109,7 @@ export class LeetCodeProgressEmailTrackerStack extends cdk.Stack {
 
     // Create SES Lambda function
     const sesLambdaFunction = new Function(this, 'SesLambdaFunction', {
-      runtime: Runtime.PYTHON_3_9,
+      runtime: Runtime.PYTHON_3_12,
       description: 'SES lambda function',
       handler: 'index.handler',
       code: Code.fromInline(`
