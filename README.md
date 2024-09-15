@@ -7,8 +7,8 @@ Must-Dos:
 1. Create a Lambda Layer from the ZIP file in S3, which includes the requests library
 . This is done manually by uploading the ZIP file to a S3 bucket
 2. In deploy.yml, you will see ${{ secrets.AWS_ACCESS_KEY_ID_GAMMA }}, ${{ secrets.AWS_SECRET_ACCESS_KEY_GAMMA }}. these secrets need to be added to the GitHub repository. Go to repository settings -> secrets and variables (left panel) -> action -> new repository secret
-![Screenshot 2024-09-15 at 1 03 34 AM](https://github.com/user-attachments/assets/2b59d550-585a-4138-9e6e-3099b78f043a)
-![Screenshot 2024-09-15 at 1 14 17 AM](https://github.com/user-attachments/assets/c64a9ddd-f895-41ce-9aaa-740751518c37)
+![1](https://github.com/user-attachments/assets/5ea934ab-5752-4ccc-bb4e-0754e1d31bbe)
+![2](https://github.com/user-attachments/assets/b8f552c5-9345-4597-ac54-aed412bbf8f8)
 
 3. Replace with your SES-verified email and destination email. Go to AWS console, go to SES service, on the left panel,
    click on identities under Configuration, and create a new identity
