@@ -113,37 +113,43 @@ export class LeetCodeProgressEmailTrackerStack extends cdk.Stack {
       runtime: Runtime.PYTHON_3_12,
       description: 'SES lambda function',
       handler: 'index.handler',
-      code: Code.fromInline(`
-        import boto3
-        import json
-        import os
-        
-        def handler(event, context):
-            ses = boto3.client('ses')
-            subject = "Leetcode Status Report on " + event['yearDateMonth']
-            body = event['lambda_output']
+      code: Code.fromInline(
+        `
+  import boto3
+  import json
+  import os
 
-            response = ses.send_email(
-                Source=os.environ['SES_SOURCE_EMAIL'],
-                Destination={
-                    'ToAddresses': [os.environ['SES_DESTINATION_EMAIL']],
-                },
-                Message={
-                    'Subject': {
-                        'Data': subject
-                    },
-                    'Body': {
-                        'Text': {
-                            'Data': body
-                        }
-                    }
-                }
-            )
+  def handler(event, context):
+      ses = boto3.client('ses')
 
-            return {
-                'statusCode': 200,
-                'body': json.dumps(response)
-            }
+      # Extract and parse the lambda_output and yearDateMonth from the event
+      lambda_output = json.loads(event['body'])  # Parse the JSON string
+      yearDateMonth = lambda_output['yearDateMonth']
+
+      subject = "Leetcode Status Report on " + yearDateMonth
+      body = json.dumps(lambda_output, indent=4)  # Format the body as a JSON string for readability
+      
+      response = ses.send_email(
+          Source=os.environ['SES_SOURCE_EMAIL'],
+          Destination={
+              'ToAddresses': [os.environ['SES_DESTINATION_EMAIL']],
+          },
+          Message={
+              'Subject': {
+                  'Data': subject
+              },
+              'Body': {
+                  'Text': {
+                      'Data': body
+                  }
+              }
+          }
+      )
+
+      return {
+        'statusCode': 200,
+        'body': json.dumps(response)
+      }      
       `),
       role: lambdaRole,
       logRetention: RetentionDays.ONE_MONTH,
