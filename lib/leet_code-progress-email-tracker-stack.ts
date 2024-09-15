@@ -53,7 +53,7 @@ export class LeetCodeProgressEmailTrackerStack extends cdk.Stack {
     // This is done manually by uploading the ZIP file to a S3 bucket
     const lambdaLayer = new LayerVersion(this, 'RequestsLayer', {
       code: Code.fromBucket(Bucket.fromBucketName(this, 'LayerBucket',
-        'cdk-project-lambda-layer-zip-files'), //replace 'cdk-project-lambda-layer-zip-files' with your bucket name
+        'cdk-project-lambda-layer-zip-files-1'), //replace 'cdk-project-lambda-layer-zip-files-1' with your bucket name
         'requests_layer.zip'), //replace 'requests_layer.zip' with your file name
       compatibleRuntimes: [Runtime.PYTHON_3_12],
       description: 'A layer to include requests library',
