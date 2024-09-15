@@ -61,6 +61,7 @@ export class LeetCodeProgressEmailTrackerStack extends cdk.Stack {
     );
 
     // Create Lambda Layer from the ZIP file in S3, which includes the requests library
+    // This is done manually by uploading the ZIP file to a S3 bucket
     const lambdaLayer = new LayerVersion(this, 'RequestsLayer', {
       code: Code.fromBucket(Bucket.fromBucketName(this, 'LayerBucket', 'cdk-project-lambda-layer-zip-files-1'), 'requests_layer.zip'),
       compatibleRuntimes: [Runtime.PYTHON_3_12],
@@ -188,7 +189,7 @@ export class LeetCodeProgressEmailTrackerStack extends cdk.Stack {
       .when(Condition.numberEquals('$.statusCode', 200), sesLambdaInvoke.addCatch(failureState).next(successState))
       .otherwise(failureState);
 
-      
+
     // Define the workflow with error handling
     const definition = lambdaInvoke.addCatch(failureState, { resultPath: '$.error-info' }).next(decisionState);
 
