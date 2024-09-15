@@ -5,8 +5,8 @@ currently automatically deploying to 2 regions: us-east-1 and us-west-2
 Must-Dos:
 
 1. Create a Lambda Layer from the ZIP file in S3, which includes the requests library
-. This is done manually by uploading the ZIP file to a S3 bucket
-![3](https://github.com/user-attachments/assets/7e846ff0-d069-464d-aabf-1bd430b5af7a)
+. This is done manually by uploading the ZIP file to a S3 bucket: [requests_layer.zip](https://github.com/user-attachments/files/17007644/requests_layer.zip)
+![3](https://github.com/user-attachments/assets/8aacbf7d-caa0-43da-9202-963c0bd33cbe)
 2. In deploy.yml, you will see ${{ secrets.AWS_ACCESS_KEY_ID_GAMMA }}, ${{ secrets.AWS_SECRET_ACCESS_KEY_GAMMA }}. these secrets need to be added to the GitHub repository. Go to repository settings -> secrets and variables (left panel) -> action -> new repository secret
 ![1](https://github.com/user-attachments/assets/5ea934ab-5752-4ccc-bb4e-0754e1d31bbe)
 ![2](https://github.com/user-attachments/assets/b8f552c5-9345-4597-ac54-aed412bbf8f8)
@@ -24,3 +24,4 @@ Must-Dos:
 * `npx cdk deploy`  deploy this stack to your default AWS account/region
 * `npx cdk diff`    compare deployed stack with current state
 * `npx cdk synth`   emits the synthesized CloudFormation template
+
