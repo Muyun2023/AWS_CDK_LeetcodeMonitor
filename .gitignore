@@ -6,3 +6,9 @@ node_modules
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+# Ignore Visual Studio Code directory
+.vscode/
+
+# Ignore macOS metadata files
+.DS_Store
