@@ -4,6 +4,9 @@ This is a sample email you will receive:
 ![5](https://github.com/user-attachments/assets/cdbaa677-7e00-4083-9cb4-7c4988984c45)
 
 
+This is the design diagram:
+![6](https://github.com/user-attachments/assets/585e50e7-6075-48c6-af90-2db9642bc9ad)
+
 currently automatically deploying to one region: us-west-2. You can uncomment the deploy.yml to deploy to more prod stages/regions
 
 Must-Dos before running the project:
