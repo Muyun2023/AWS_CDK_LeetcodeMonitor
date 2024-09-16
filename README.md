@@ -3,11 +3,13 @@
 This is a sample email you will receive:
 ![5](https://github.com/user-attachments/assets/cdbaa677-7e00-4083-9cb4-7c4988984c45)
 
-
 This is the design diagram:
 ![6](https://github.com/user-attachments/assets/585e50e7-6075-48c6-af90-2db9642bc9ad)
 
-currently automatically deploying to one region: us-west-2. You can uncomment the deploy.yml to deploy to more prod stages/regions
+This shows the design works correctly:
+![7](https://github.com/user-attachments/assets/5b55158f-4139-47b4-a3d7-26c5fd1d594a)
+
+---
 
 Must-Dos before running the project (search for TODO in the code):
 
@@ -20,6 +22,10 @@ Must-Dos before running the project (search for TODO in the code):
 3. Replace with your SES-verified email and destination email. Go to AWS console, go to SES service, on the left panel,
    click on identities under Configuration, and create a new identity
 ![4](https://github.com/user-attachments/assets/edc70d67-4ad2-4c25-bdf0-1fa2538fb481)
+
+Note: This is currently automatically deployed to one region: us-west-2. You can uncomment the deploy.yml to deploy to more prod stages/regions
+
+---
 
 ## How to get started:
 * `aws configure`   set up aws account connection -> in ChatGPT, search "how to set up aws configure" . if you don't have the AWS Access Key ID and Secret Access Key, search "AWS Access Key ID and Secret Access Key"
@@ -36,6 +42,8 @@ Default output format [None]: json
 * `git add .`
 * `git commit -m "new code"`
 * `git push`
+
+---
 
 ## Useful commands
 * `aws configure`   set up aws account connection
