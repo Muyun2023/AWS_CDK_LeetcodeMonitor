@@ -33,13 +33,13 @@ export class LeetCodeProgressEmailTrackerStack extends cdk.Stack {
     lambdaRole.addToPolicy(
       new PolicyStatement({
         actions: ['s3:PutObject', 's3:GetObject', 's3:ListBucket'],
-        resources: ['arn:aws:s3:::lambda-output-bucket-471112773805-us-west-2'],
+        resources: ['arn:aws:s3:::lambda-output-bucket-533267129974-us-west-2'], //TODO: change your AWS accountID and region
       }),
     );
     lambdaRole.addToPolicy(
       new PolicyStatement({
         actions: ['s3:PutObject', 's3:GetObject', 's3:ListBucket'],
-        resources: ['arn:aws:s3:::lambda-output-bucket-471112773805-us-west-2/*'],
+        resources: ['arn:aws:s3:::lambda-output-bucket-533267129974-us-west-2/*'],//TODO: change your AWS accountID and region
       }),
     );
     lambdaRole.addToPolicy(
