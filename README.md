@@ -27,13 +27,14 @@ Must-Dos before running the project (search for TODO in the code):
 1. Create a Lambda Layer from the ZIP file in S3, which includes the requests library
 . This is done manually by uploading the ZIP file to a S3 bucket: [requests_layer.zip](https://github.com/user-attachments/files/17007644/requests_layer.zip)
 ![3](https://github.com/user-attachments/assets/8aacbf7d-caa0-43da-9202-963c0bd33cbe)
-2. In deploy.yml, you will see ${{ secrets.AWS_ACCESS_KEY_ID_GAMMA }}, ${{ secrets.AWS_SECRET_ACCESS_KEY_GAMMA }}. these secrets need to be added to the GitHub repository. Go to repository settings -> secrets and variables (left panel) -> action -> new repository secret
+2. Find the deploy.yml at .github/workflows, you will see ${{ secrets.AWS_ACCESS_KEY_ID_GAMMA }}, ${{ secrets.AWS_SECRET_ACCESS_KEY_GAMMA }}. these secrets need to be added to the GitHub repository. Go to repository settings -> secrets and variables (left panel) -> action -> new repository secret
 ![1](https://github.com/user-attachments/assets/5ea934ab-5752-4ccc-bb4e-0754e1d31bbe)
 ![2](https://github.com/user-attachments/assets/b8f552c5-9345-4597-ac54-aed412bbf8f8)
 3. Replace with your SES-verified email and destination email. Go to AWS console, go to SES service, on the left panel,
    click on identities under Configuration, and create a new identity
 ![4](https://github.com/user-attachments/assets/edc70d67-4ad2-4c25-bdf0-1fa2538fb481)
-
+4. Follow and complete the TODO list note in codes. Double check the accountId and region, replace them to yours own information.
+   
 Note: This is currently automatically deployed to one region: us-east-2. You can uncomment the deploy.yml to deploy to more prod stages/regions
 
 ---
