@@ -34,7 +34,7 @@ Must-Dos before running the project (search for TODO in the code):
    click on identities under Configuration, and create a new identity
 ![4](https://github.com/user-attachments/assets/edc70d67-4ad2-4c25-bdf0-1fa2538fb481)
 
-Note: This is currently automatically deployed to one region: us-west-2. You can uncomment the deploy.yml to deploy to more prod stages/regions
+Note: This is currently automatically deployed to one region: us-east-2. You can uncomment the deploy.yml to deploy to more prod stages/regions
 
 ---
 
@@ -44,7 +44,7 @@ Note: This is currently automatically deployed to one region: us-west-2. You can
 $ aws configure
 AWS Access Key ID [None]: yourID
 AWS Secret Access Key [None]: yourKey
-Default region name [None]: us-west-2
+Default region name [None]: us-east-2
 Default output format [None]: json
 ```
 * `npm run build`   compile typescript to js
