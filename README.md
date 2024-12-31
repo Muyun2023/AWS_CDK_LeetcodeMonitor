@@ -33,9 +33,9 @@ Must-Dos before running the project (search for TODO in the code):
 3. Replace with your SES-verified email and destination email. Go to AWS console, go to SES service, on the left panel,
    click on identities under Configuration, and create a new identity
 ![4](https://github.com/user-attachments/assets/edc70d67-4ad2-4c25-bdf0-1fa2538fb481)
-4. Follow and complete the TODO list note in codes. Double check the accountId and region, replace them to yours own information.
-   
-Note: This is currently automatically deployed to one region: us-east-2. You can uncomment the deploy.yml to deploy to more prod stages/regions
+
+4. Follow and complete the TODO list note in codes. Pay attention to the accountId and region, replace them to yours own AWS accountId and deploy region.
+Currently deployed to one region: us-east-2. You can uncomment the deploy.yml to deploy to more prod stages/regions
 
 ---
 
