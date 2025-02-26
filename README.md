@@ -12,7 +12,7 @@ Technologies Used: AWS S3, AWS SES, AWS Eventbridge, AWS Step Function, AWS Lamb
 
 
 This is a sample email you will receive:
-![5](https://github.com/user-attachments/assets/cdbaa677-7e00-4083-9cb4-7c4988984c45)
+![5](https://github.com/Muyun2023/AWS_CDK_LeetcodeMonitor/blob/main/example.png)
 
 This is the design diagram:
 ![6](https://github.com/user-attachments/assets/585e50e7-6075-48c6-af90-2db9642bc9ad)
