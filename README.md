@@ -72,4 +72,5 @@ Default output format [None]: json
 ---
 
 special mention: thanks to this useful API provided in https://github.com/alfaarghya/alfa-leetcode-api 
-i don't see leetcode's graphql. It's removed.
+
+© Muyun Ji. Confidential and Proprietary. All Rights Reserved.
